@@ -99,6 +99,7 @@ LOG_LEVEL = 'ERROR'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+"""
 # Add Your ScrapeOps API key
 
 SCRAPEOPS_API_KEY = '4fe0ef0e-ca1d-4587-83d4-5592618a7ab5'
@@ -115,3 +116,4 @@ DOWNLOADER_MIDDLEWARES = {
 'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
 'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
 }
+"""
