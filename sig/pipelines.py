@@ -23,7 +23,7 @@ class SigPipeline(FilesPipeline):
     def file_path(self, request, response=None, info=None, *, item=None):
         file_names = request.meta['file_names']
         return file_names
-
+    
     def item_completed(self, results, item, info):
         file_paths = [x['path'] for ok, x in results if ok]
         #print("file paths: ", file_paths)
