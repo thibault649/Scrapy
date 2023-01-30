@@ -60,9 +60,12 @@ class IndexSpider(scrapy.Spider):
                 count += 1
         #print(count)
         if count == len(os.listdir(output_path)):
-            href = [href for href in response.css('a::attr(href)').getall() if 'cadastre' in href and 'shp' in href and 'departement' in href][0]
-            #print("link founded: ", href)
-            yield scrapy.Request(url=href, callback=self.parse_next_page)
+        """
+        href = [href for href in response.css('a::attr(href)').getall() if 'cadastre' in href and 'shp' in href and 'departement' in href][0]
+        #print("link founded: ", href)
+        yield scrapy.Request(url=href, callback=self.parse_next_page)
+        
+        """
         else:
             if file_date < new_date:
                 href = [href for href in response.css('a::attr(href)').getall() if 'cadastre' in href and 'shp' in href and 'departement' in href][0]
