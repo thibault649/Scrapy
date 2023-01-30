@@ -74,7 +74,8 @@ ROBOTSTXT_OBEY = False
 ITEM_PIPELINES  = {'sig.pipelines.SigPipeline': 300}
 #ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
 #FILES_STORE = r'C:\Users\thi-cros\Downloads\Portable Python-3.8.0 x64\sig\test2'
-#FILES_STORE = r'D:\test2'
+FILES_STORE = 's3://scrapytestons/files'
+IMAGES_STORE_S3_ACL = 'public-read'
 
 LOG_LEVEL = 'ERROR'
 
