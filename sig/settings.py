@@ -77,7 +77,7 @@ ITEM_PIPELINES  = {'sig.pipelines.SigPipeline': 300}
 FILES_STORE = 's3://scrapytestons/files'
 IMAGES_STORE_S3_ACL = 'public-read'
 
-LOG_LEVEL = 'ERROR'
+#LOG_LEVEL = 'ERROR'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
