@@ -29,7 +29,7 @@ class SigPipeline(FilesPipeline):
         #print("file paths: ", file_paths)
         settings = get_project_settings()
         output_path = settings.get('FILES_STORE') + '\\' + file_paths[0]
-        #print("output path: ", output_path)
+        print("output path: ", output_path)
         with zipfile.ZipFile(output_path, 'r') as zip_ref:
             zip_ref.extractall(output_path[:output_path.rfind('.')])
         os.remove(output_path)
