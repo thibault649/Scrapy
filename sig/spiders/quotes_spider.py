@@ -73,6 +73,7 @@ class IndexSpider(scrapy.Spider):
                 yield scrapy.Request(url=href, callback=self.parse_next_page)
             else:
                 print('latest version already downloaded')
+        """
 
     def parse_next_page(self, response):
         list_href = response.css('a::attr(href)').getall()[1:]
@@ -85,12 +86,10 @@ class IndexSpider(scrapy.Spider):
         file_url_list = response.css('a::attr(href)').getall()[1:]
         for file_name in file_url_list:
             file_url = response.urljoin(file_name)
-            #print(file_url)
-            #print(file_name)
+            print(file_url)
+            print(file_name)
             item = ZipfilesItem()
             item['file_urls'] = file_url
             item['file_names'] = file_name
             print('file: ' + file_name[:file_name.rfind('.')])
             yield item
-            
-     """
