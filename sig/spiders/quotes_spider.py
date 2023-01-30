@@ -41,6 +41,8 @@ class IndexSpider(scrapy.Spider):
         #date = date_day_converted + ' ' + date.split(' ')[1] + ' ' + date.split(' ')[2]
         #print("test_date : ", datetime.strptime(date, '%d %b %Y'))
         print("Last vintage: ", new_date.strftime("%d-%m-%Y"))
+        
+        """
 
         settings = get_project_settings()
         output_path = settings.get('FILES_STORE')
@@ -87,3 +89,5 @@ class IndexSpider(scrapy.Spider):
             item['file_names'] = file_name
             print('file: ' + file_name[:file_name.rfind('.')])
             yield item
+            
+     """
