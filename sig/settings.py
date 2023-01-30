@@ -114,3 +114,8 @@ DOWNLOADER_MIDDLEWARES = {
 'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
 'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
 }
+
+#AWS
+
+AWS_ACCESS_KEY_ID = 'AKIASRK4XTWVPJHBS5HW'
+AWS_SECRET_ACCESS_KEY = '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'
